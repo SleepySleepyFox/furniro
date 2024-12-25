@@ -14,11 +14,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#B88E2F"
+        primary: "#B88E2F",
+        primary_h: "#3A3A3A"
       },
 
       screens: {
         'sm+': "530px",
+        
         'lg+': "1440px",
       },
 
