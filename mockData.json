@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "TIPHEDE Rug, flatwoven",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "29.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/tiphede-rug-flatwoven__0710175_PE7378_S5.JPG"
+  },
+  {
+    "id": 2,
+    "name": "KALLAX Shelf unit",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "79.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit__0251907_PE389517_S5.JPG"
+  },
+  {
+    "id": 3,
+    "name": "MALM Bed frame, Queen",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "269.00"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame__0526982_PE644565_S5.JPG"
+  },
+  {
+    "id": 4,
+    "name": "HEMNES 8-drawer dresser",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "399.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/hemnes-drawer-dresser__0736075_PE740925_S5.JPG"
+  },
+  {
+    "id": 5,
+    "name": "VESKEN Cart",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "9.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/vesken-cart__0710305_PE727453_S5.JPG"
+  },
+  {
+    "id": 6,
+    "name": "LACK Side table",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "14.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/lack-side-table__0835890_PE777399_S5.JPG"
+  },
+  {
+    "id": 7,
+    "name": "BILLY Bookcase",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "69.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/billy-bookcase__0371202_PE553461_S5.JPG"
+  },
+  {
+    "id": 8,
+    "name": "LINNMON / ADILS Table",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "49.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/linnmon-adils-table__0737160_PE741366_S5.JPG"
+  },
+  {
+    "id": 9,
+    "name": "SKUBB Storage box",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "7.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/skubb-storage-box__0392976_PE563710_S5.JPG"
+  },
+  {
+    "id": 10,
+    "name": "R\u00c5SKOG Utility cart",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "39.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart__0738354_PE741840_S5.JPG"
+  },
+  {
+    "id": 11,
+    "name": "TIPHEDE Rug, flatwoven Variant 11",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "29.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/tiphede-rug-flatwoven__0710175_PE727378_S5.JPG"
+  },
+  {
+    "id": 12,
+    "name": "KALLAX Shelf unit Variant 12",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "79.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit__0251907_PE389517_S5.JPG"
+  },
+  {
+    "id": 13,
+    "name": "MALM Bed frame, Queen Variant 13",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "269.00"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame__0526982_PE644565_S5.JPG"
+  },
+  {
+    "id": 14,
+    "name": "HEMNES 8-drawer dresser Variant 14",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "399.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/hemnes-drawer-dresser__0736075_PE740925_S5.JPG"
+  },
+  {
+    "id": 15,
+    "name": "VESKEN Cart Variant 15",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "9.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/vesken-cart__0710305_PE727453_S5.JPG"
+  },
+  {
+    "id": 16,
+    "name": "LACK Side table Variant 16",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "14.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/lack-side-table__0835890_PE777399_S5.JPG"
+  },
+  {
+    "id": 17,
+    "name": "BILLY Bookcase Variant 17",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "69.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/billy-bookcase__0371202_PE553461_S5.JPG"
+  },
+  {
+    "id": 18,
+    "name": "LINNMON / ADILS Table Variant 18",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "49.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/linnmon-adils-table__0737160_PE741366_S5.JPG"
+  },
+  {
+    "id": 19,
+    "name": "SKUBB Storage box Variant 19",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "7.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/skubb-storage-box__0392976_PE563710_S5.JPG"
+  },
+  {
+    "id": 20,
+    "name": "R\u00c5SKOG Utility cart Variant 20",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "39.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart__0738354_PE741840_S5.JPG"
+  },
+  {
+    "id": 21,
+    "name": "TIPHEDE Rug, flatwoven Variant 21",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "29.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/tiphede-rug-flatwoven__0710175_PE727378_S5.JPG"
+  },
+  {
+    "id": 22,
+    "name": "KALLAX Shelf unit Variant 22",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "79.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit__0251907_PE389517_S5.JPG"
+  },
+  {
+    "id": 23,
+    "name": "MALM Bed frame, Queen Variant 23",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "269.00"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame__0526982_PE644565_S5.JPG"
+  },
+  {
+    "id": 24,
+    "name": "HEMNES 8-drawer dresser Variant 24",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "399.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/hemnes-drawer-dresser__0736075_PE740925_S5.JPG"
+  },
+  {
+    "id": 25,
+    "name": "VESKEN Cart Variant 25",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "9.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/vesken-cart__0710305_PE727453_S5.JPG"
+  },
+  {
+    "id": 26,
+    "name": "LACK Side table Variant 26",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "14.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/lack-side-table__0835890_PE777399_S5.JPG"
+  },
+  {
+    "id": 27,
+    "name": "BILLY Bookcase Variant 27",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "69.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/billy-bookcase__0371202_PE553461_S5.JPG"
+  },
+  {
+    "id": 28,
+    "name": "LINNMON / ADILS Table Variant 28",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "49.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/linnmon-adils-table__0737160_PE741366_S5.JPG"
+  },
+  {
+    "id": 29,
+    "name": "SKUBB Storage box Variant 29",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "7.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/skubb-storage-box__0392976_PE563710_S5.JPG"
+  },
+  {
+    "id": 30,
+    "name": "R\u00c5SKOG Utility cart Variant 30",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "39.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart__0738354_PE741840_S5.JPG"
+  },
+  {
+    "id": 31,
+    "name": "TIPHEDE Rug, flatwoven Variant 31",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "29.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/tiphede-rug-flatwoven__0710175_PE727378_S5.JPG"
+  },
+  {
+    "id": 32,
+    "name": "KALLAX Shelf unit Variant 32",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "79.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit__0251907_PE389517_S5.JPG"
+  },
+  {
+    "id": 33,
+    "name": "MALM Bed frame, Queen Variant 33",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "269.00"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame__0526982_PE644565_S5.JPG"
+  },
+  {
+    "id": 34,
+    "name": "HEMNES 8-drawer dresser Variant 34",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "399.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/hemnes-drawer-dresser__0736075_PE740925_S5.JPG"
+  },
+  {
+    "id": 35,
+    "name": "VESKEN Cart Variant 35",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "9.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/vesken-cart__0710305_PE727453_S5.JPG"
+  },
+  {
+    "id": 36,
+    "name": "LACK Side table Variant 36",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "14.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/lack-side-table__0835890_PE777399_S5.JPG"
+  },
+  {
+    "id": 37,
+    "name": "BILLY Bookcase Variant 37",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "69.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/billy-bookcase__0371202_PE553461_S5.JPG"
+  },
+  {
+    "id": 38,
+    "name": "LINNMON / ADILS Table Variant 38",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "49.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/linnmon-adils-table__0737160_PE741366_S5.JPG"
+  },
+  {
+    "id": 39,
+    "name": "SKUBB Storage box Variant 39",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "7.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/skubb-storage-box__0392976_PE563710_S5.JPG"
+  },
+  {
+    "id": 40,
+    "name": "R\u00c5SKOG Utility cart Variant 40",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "39.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart__0738354_PE741840_S5.JPG"
+  },
+  {
+    "id": 41,
+    "name": "TIPHEDE Rug, flatwoven Variant 41",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "29.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/tiphede-rug-flatwoven__0710175_PE727378_S5.JPG"
+  },
+  {
+    "id": 42,
+    "name": "KALLAX Shelf unit Variant 42",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "79.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit__0251907_PE389517_S5.JPG"
+  },
+  {
+    "id": 43,
+    "name": "MALM Bed frame, Queen Variant 43",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "269.00"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/malm-bed-frame__0526982_PE644565_S5.JPG"
+  },
+  {
+    "id": 44,
+    "name": "HEMNES 8-drawer dresser Variant 44",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "399.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/hemnes-drawer-dresser__0736075_PE740925_S5.JPG"
+  },
+  {
+    "id": 45,
+    "name": "VESKEN Cart Variant 45",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "9.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/vesken-cart__0710305_PE727453_S5.JPG"
+  },
+  {
+    "id": 46,
+    "name": "LACK Side table Variant 46",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "14.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/lack-side-table__0835890_PE777399_S5.JPG"
+  },
+  {
+    "id": 47,
+    "name": "BILLY Bookcase Variant 47",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "69.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/billy-bookcase__0371202_PE553461_S5.JPG"
+  },
+  {
+    "id": 48,
+    "name": "LINNMON / ADILS Table Variant 48",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "49.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/linnmon-adils-table__0737160_PE741366_S5.JPG"
+  },
+  {
+    "id": 49,
+    "name": "SKUBB Storage box Variant 49",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "7.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/skubb-storage-box__0392976_PE563710_S5.JPG"
+  },
+  {
+    "id": 50,
+    "name": "R\u00c5SKOG Utility cart Variant 50",
+    "price": {
+      "currency": "USD",
+      "currentPrice": "39.99"
+    },
+    "image": "https://www.ikea.com/us/en/images/products/raskog-utility-cart__0738354_PE741840_S5.JPG"
+  }
+]
