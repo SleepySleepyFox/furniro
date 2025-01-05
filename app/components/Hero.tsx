@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from "motion/react"
+import Button from '../common/Button'
 
 export default function Hero() {
   return (
@@ -19,7 +20,9 @@ export default function Hero() {
           <p className='text-sm font-semibold'>New Arrival</p>
           <h1 className=' text-[#B88E2F] font-bold text-5xl md:text-2xl lg:text-5xl'>Discover Our New Collection</h1>
           <p className='text-sm'>Our new collection offers timeless designs, blending comfort, quality, and style for every space.</p>
-          <button className='bg-[#B88E2F] h-[74px] md:h-[54px] lg:h-[74px] w-full font-black text-white md:w-56'>Buy Now</button>
+          <div>
+          <Button color='bg-[#B88E2F]' textColor='text-white'/>
+          </div>
         </motion.div>
       </div>
     </div>
