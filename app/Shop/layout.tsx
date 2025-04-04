@@ -3,14 +3,9 @@ import { ReactNode, useRef } from "react"
 import Navbar from "../components/Navbar"
 import Header from "../common/Header"
 import Filters from "../components/Filters"
-import { Provider } from "react-redux"
-import { AppStore, makeStore } from "../../lib/store"
-import { useStore } from "react-redux"
-import { ItemsPerPage } from "../../lib/features/filters/filterSlices"
-import { createSelector } from "@reduxjs/toolkit"
-import { useDispatch } from "react-redux"
 import StoreProvider from "../StoreProvider"
-import Pagination from "../common/Pagination"
+import ShopBaner from "../components/ShopBaner"
+import Footer from "../components/Footer"
 
 export default function Layout({ children } : {children : ReactNode}) {
 
@@ -24,6 +19,8 @@ export default function Layout({ children } : {children : ReactNode}) {
         </div>
         {children}
       </main>
+      <ShopBaner/>
+      <Footer/>
       </StoreProvider>
   )
 }

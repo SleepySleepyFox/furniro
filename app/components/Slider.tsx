@@ -32,21 +32,6 @@ export default function Slider({productData} : {productData: {h: string, p: stri
   const displayProducts =  slides.map((e, index) => {
     if(currentSlide === index) console.log(index)
     return(
-   
-    
-    //   <img
-    //   key={index}
-    //   src={`${e.img}`} 
-    //   ref={slideRef} 
-    //   className={`duration-300 ease-out w-[208px] h-[300px] object-cover ${
-    //     currentSlide === index ? 'h-[500px] w-[229px]' : 'h-[300px] w-[229px]'
-    //   }`}
-    //   style={{
-    //     transform: `translateX(-${
-    //       slideRef.current?.width &&(slideRef.current?.width + 8) * currentSlide}px)`,
-    //   }}
-    // />
-
     <div
     key={index}
     ref={slideRef}
