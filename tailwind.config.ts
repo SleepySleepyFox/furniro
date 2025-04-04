@@ -10,12 +10,16 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/HeroBG.svg')",
+        'furniro-furniture': "url(/FurniroFurniture_bg.png)",
+        'shop-header': "url(/ShopBG.svg)"
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#B88E2F",
-        primary_h: "#3A3A3A"
+        primary_h: "#3A3A3A",
+        secondary: "#FCF8F3",
+        tertiary: "#F9F1E7"
       },
 
       screens: {

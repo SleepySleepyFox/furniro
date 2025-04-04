@@ -4,8 +4,9 @@ import { AlignJustify } from 'lucide-react';
 import Image from 'next/image';
 import Sidebar from './sidebar';
 import { User, Heart, Search, ShoppingCart } from 'lucide-react';
+import Link from 'next/link';
 
-export default function Header() {
+export default function Navbar() {
   const [sidebar, setSidebar] = useState(false)
   useEffect(() => {
     console.log(sidebar)
@@ -15,14 +16,32 @@ export default function Header() {
     <div className='w-full p-4 h-[50px] flex items-center justify-between md:justify-around'>
       <AlignJustify className='md:hidden' onClick={() => setSidebar(e => !e)} />
       <Sidebar sidebarState={sidebar} setSidebarState={setSidebar} />
-      <Image priority src={"/logo.svg"} alt='logo' height={50} width={100} />
+      <Link href={'/'}>
+        <img src={"/logo.svg"} alt='logo' className='h-[22px] w-[100px]'/>
+      </Link>
 
       <nav className='hidden md:block align-middle'>
         <ul className='flex md:gap-10 lg:gap-16'>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contacts</li>
+          <li>
+            <Link href={'/'}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href={'/Shop'}>
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link href={'/About'}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href={'/Contacts'}>
+              Contacts
+            </Link>
+          </li>
         </ul>
       </nav>
 

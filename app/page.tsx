@@ -1,16 +1,27 @@
-import Image from "next/image";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ProductSection from "./components/ProductSection";
+'use client'
 import BrowseSection from "./components/BrowseSection";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import ProductSection from "./components/ProductSection";
+import SliderSection from "./components/SliderSection";
+import FurniroFurniture from "./components/FurniroFurniture"
+import Footer from "./components/Footer"
+import StoreProvider from "./StoreProvider";
+
 
 export default function Home() {
   return (
     <div className="h-screen w-full">
-      <Header />
-      <Hero />
+      <Navbar />
+      <Hero/>
       <BrowseSection />
-      <ProductSection isOnHero={true} sliceTo={10}/>
+      <StoreProvider>
+        <ProductSection isOnHero={true} sliceTo={10}/>
+      </StoreProvider>
+      <SliderSection/> 
+      <FurniroFurniture/>
+      <Footer/>
     </div>
+
   );
 }

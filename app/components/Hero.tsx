@@ -21,7 +21,7 @@ export default function Hero() {
           <h1 className=' text-[#B88E2F] font-bold text-5xl md:text-2xl lg:text-5xl'>Discover Our New Collection</h1>
           <p className='text-sm'>Our new collection offers timeless designs, blending comfort, quality, and style for every space.</p>
           <div>
-          <Button color='bg-[#B88E2F]' textColor='text-white'/>
+          <Button color='bg-primary' textColor='text-white' text='Buy now'/>
           </div>
         </motion.div>
       </div>

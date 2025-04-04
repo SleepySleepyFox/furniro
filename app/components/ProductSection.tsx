@@ -3,60 +3,60 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Product from './Product';
 import data from "../../mockData.json"
-import { div } from 'framer-motion/client';
 import Button from '../common/Button';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/lib/store';
 
 interface productFields {
-  id?: number,
-  name: string,
-  price: {
-    currency: string,
-    currentPrice: string,
-  },
-  image: string,
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  discount_price: number;
+  sku: string;
+  status: 'active' | 'inactive' | string;
+  stock: number;
+  weight: number;
+  wood_type: string;
+  finish: string;
+  featured: boolean;
+  image_path: string;
+  dimensions: {
+    width: number;
+    height: number;
+    depth: number;
+  };
+  tags: string[] | null;
+  created_at: string; // ISO 8601 date string
+  updated_at: string; // ISO 8601 date string
 }
 
 export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean, sliceTo : number}) {
-  const [displayedProducts, setDisplayedProducts] = useState<productFields[]>(data)
-  //TODO: display categories, attach images to certian categories
-  // Apply filter to the next section on click 
-
-  // Setup sction before this one through keyword search 
-  // Pay for API :(
-  const getData = async () => {
-    const options = {
-      method: 'GET',
-      url: `https://${process.env.NEXT_PUBLIC_API_HOST}/keywordSearch`,
-      params: {
-        keyword: 'Bathroom',
-        countryCode: 'us',
-        languageCode: 'en'
-      },
-      headers: {
-        'x-rapidapi-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
-        'x-rapidapi-host': `${process.env.NEXT_PUBLIC_API_HOST}`
-      }
-    };
-
-    try {
-      const response = await axios.request(options);
-      setDisplayedProducts(response.data)
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    console.log(displayedProducts)
-    //getData
-  }, [])
-
-  // Display data from API
-  const apiData = displayedProducts?.slice(0, sliceTo).map(e => {
-    return <Product key={e.id} productName={e.name} productCost={`${e.price.currentPrice} ${e.price.currency}`} productImg={`${'/HeroBG.png'}`} />
-  })
+  const [displayedProducts, setDisplayedProducts] = useState<productFields[]>([])
+  const itemsDisplayedFilter = useSelector((state : RootState) => state.filter.itemsPerPage)
+  const [itemsDisplayedAmount, setItmesDisplayedAmount] = useState(itemsDisplayedFilter)
   
+  const productDataLength = Object.keys(data).length
+  // slisceTo state 
+  const getData = async (limit : number) => {
+    await axios.get(`https://furniture-api.fly.dev/v1/products?limit=${limit}`)
+      .then(data => {
+        setDisplayedProducts(data.data.data)
+        console.log('api data:',data.data.data)
+      })
+    }
+    
+    useEffect(() => {
+      getData(itemsDisplayedAmount)
+    }, [itemsDisplayedAmount, itemsDisplayedFilter])
+    
+    const apiData = displayedProducts?.map((e, index) => {
+      return <Product productCost={e.price} productImg={e.image_path} productName={e.name} key={index}/>
+    })
+    
+    console.log('data: ', displayedProducts)
   return (
     <div className='h-fit lg+:p-9 p-4'>
       <h1 className='text-primary_h font-bold text-center text-3xl py-8'>Our Producs</h1>
@@ -66,10 +66,16 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-items-center lg:grid-cols-3 lg+:grid-cols-5 gap-2 place-items-center'>
           {apiData}
         </div>
-        {isOnHero &&
+        {isOnHero ?
          <Link href={'/Shop'} className='w-full flex justify-center'>
-            <Button color='bg-transparent hover:bg-primary' textColor='text-primary hover:text-white' addStyle='border-primary border-solid border-2'/>
-          </Link>}
+            <Button color='bg-transparent' textColor='text-primary_h' addStyle='border-primary border-solid border-2  hover:text-white hover:bg-primary' text='Show more'/>
+          </Link> : 
+          // Find good conditin to stop showing button befor it exedes limits of 100 items 
+         <div 
+          className='px-6 py-2 border-2 border-primary w-fit self-center mt-2 hover:bg-primary hover:text-white duration-300 select-none'
+          onClick={() => setItmesDisplayedAmount(e => e + itemsDisplayedFilter)}>
+            SHOW MORE
+          </div>}
         </div> :
         <div className='flex flex-col items-center'>
           <h1>
