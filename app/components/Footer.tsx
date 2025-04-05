@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Footer() {
   return (
-  <footer className="flex flex-col justify-center items-center py-4">
-    <div className='flex justify-between'>
+  <footer className="flex flex-col justify-center items-center py-4 px-8 w-full">
+    <div className='flex justify-between w-full py-6'>
       <div className='w-[25%] flex flex-col gap-14'>
         <h1 className='text-3xl font-extrabold'>Foruniro.</h1>
         <address className='leading-relaxed text-[#9F9F9F]'>400 University Drive Suite 200 Coral Gables,
@@ -61,15 +61,15 @@ export default function Footer() {
       <div className='flex flex-col gap-14'>
         <h1 className='text-[#9F9F9F]'>Newsletter</h1>
         <div className=''>
-          <input className='text-xs mx-4 border-b-2 border-gray-200' type="text" name="" id="" placeholder='Enter Your Email Address' />
-          <button>subscribe</button>
+          <input className='text-xs mr-4 border-b-2 border-gray-200 outline-none' type="email" name="" id="" placeholder='Enter Your Email Address' />
+          <button type='submit'>subscribe</button>
         </div>
       </div>
     </div>
 
-    <hr />
+    <hr className='w-full py-4' />
 
-    <div>
+    <div className='self-start'>
     2025 forniro. All right reserved
     </div>
   </footer>
