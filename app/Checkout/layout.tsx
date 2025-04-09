@@ -6,13 +6,15 @@ import Footer from '../components/Footer'
 
 export default function layout({children} : {children : React.ReactNode}) {
   return (
-    <div className='w-full'>
+    <div className='w-fit'>
         <Navbar/>
-        <Header h='Checkout' p='p' bg='bg-shop-header'/>
-        <div className='flex w-full justify-between md:px-[5%] 2xl:px-[20%] py-[5%] md:gap-36 lg:gap-52'>
+        <div className='2xl:px-80'>
+            <Header h='Checkout' bg='bg-shop-header'/>
+        </div>
+        <div className='flex flex-col md:flex-row w-full justify-between lg:justify-center px-[5%] lg:px-[20%] 2xl:px-80 py-[5%] md:gap-10 lg:gap-24'>
             <div className='[&>div]:gap-2 '>
                 <h1 className='font-semibold text-3xl'>Billing details</h1>
-                <div className='flex'>
+                <div className='flex flex-col md:flex-row'>
                     <div className='flex flex-col'>
                         <label htmlFor="firstName">First Name</label>
                         <input type="text" name='firstName' id='firstName'  className='checkout-forms'/>

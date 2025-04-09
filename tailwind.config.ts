@@ -11,7 +11,8 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('/HeroBG.svg')",
         'furniro-furniture': "url(/FurniroFurniture_bg.png)",
-        'shop-header': "url(/ShopBG.svg)"
+        'shop-header': "url(/ShopBG.svg)",
+        'radial': "radial-gradient(var(--tw-gradient-stops, <value>))"
       },
       colors: {
         background: "var(--background)",

@@ -38,7 +38,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href={'/Contacts'}>
+            <Link href={'/Contact'}>
               Contacts
             </Link>
           </li>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const FurniroFurniture = (props : {}) => {
     return (
-    <div>
+    <div className='py-6'>
         <div className='w-full flex flex-col justify-center items-center'>
             <p className='text-xl text-[#616161]'>Share your setup with</p>
             <h1 className='font-bold text-4xl text-primary_h'>#FuniroFurniture</h1>

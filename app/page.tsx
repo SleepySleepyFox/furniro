@@ -20,6 +20,7 @@ export default function Home() {
       </StoreProvider>
       <SliderSection/> 
       <FurniroFurniture/>
+      <hr/>
       <Footer/>
     </div>
 

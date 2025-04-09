@@ -14,7 +14,7 @@ export default function Layout({ children } : {children : ReactNode}) {
       <main className="">
         <Navbar/>
         <div className="2xl:px-80">
-          <Header h='Shop' p='p' bg='bg-shop-header'/>
+          <Header h='Shop' bg='bg-shop-header'/>
           <Filters/>
         </div>
         {children}

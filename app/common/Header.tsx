@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-export default function Header({logo,h,p, bg}:{logo?: string, h: string, p: string, bg: string}) {
+export default function Header({logo,h, bg}:{logo?: string, h: string, bg: string}) {
   const pathName = usePathname()
 
   const breadcrumb = pathName

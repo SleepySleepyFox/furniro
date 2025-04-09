@@ -1,9 +1,10 @@
 import React from 'react'
+import ButtonAnimated from '../common/ButtonAnimated'
 
 export default function page() {
   return (
-    <div className='w-[600px]'>
-      <div className='py-6'>
+    <div>
+      <div>
         <div className='w-full flex justify-between'>
           <h1 className='text-2xl'>Product</h1>
           <h1 className='text-2xl'>Subtotal</h1>
@@ -43,7 +44,7 @@ export default function page() {
         <p className='font-light'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in <a href=""><strong className='font-bold'>our privacy policy.</strong></a></p>
 
         <div className='w-full flex justify-center pt-6'>
-          <button className='h-[64px] w-[318px] border-[1px] border-black rounded-xl'>Place order</button>
+         <ButtonAnimated/>
         </div>
       </div>
     </div>
