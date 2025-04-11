@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ShopBaner() {
   return (
-    <div className='bg-secondary w-full grid grid-cols-2 grid-rows-2 md:flex justify-between px-12 items-center h-[270px]'>
+    <div className='bg-secondary w-full grid grid-cols-2 grid-rows-2 md:flex justify-center px-12 items-center h-[270px] lg:gap-14'>
         <div className='w-fit flex items-center justify-center gap-2'>
             <img src="shopbaner_icon_trophy.svg" alt="" />
             <div>
@@ -11,7 +11,7 @@ export default function ShopBaner() {
             </div>
         </div>
 
-        <div className='w-fit flex items-center justify-center gap-4'>
+        <div className='w-fit flex items-end justify-center gap-4'>
             <img src="shopbaner_icon_guarantee.svg" alt="" />
             <div>
                 <h1 className='text-primary_h font-extrabold 2xl:text-2xl'>Warranty Protection</h1>

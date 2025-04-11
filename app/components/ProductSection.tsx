@@ -7,31 +7,7 @@ import Button from '../common/Button';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
-
-interface productFields {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
-  discount_price: number;
-  sku: string;
-  status: 'active' | 'inactive' | string;
-  stock: number;
-  weight: number;
-  wood_type: string;
-  finish: string;
-  featured: boolean;
-  image_path: string;
-  dimensions: {
-    width: number;
-    height: number;
-    depth: number;
-  };
-  tags: string[] | null;
-  created_at: string;
-  updated_at: string; 
-}
+import { productFields } from '../types/productTypes';
 
 export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean, sliceTo : number}) {
   const [displayedProducts, setDisplayedProducts] = useState<productFields[]>([])
@@ -53,7 +29,7 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
     }, [itemsDisplayedAmount, itemsDisplayedFilter])
     
     const apiData = displayedProducts?.map((e, index) => {
-      return <Product productCost={e.price} productImg={e.image_path} productName={e.name} key={index}/>
+      return <Product key={index} productData={e}/>
     })
     
     console.log('data: ', displayedProducts)
