@@ -4,16 +4,16 @@ import React from 'react'
 export default function Footer() {
   return (
   <footer className="flex flex-col justify-center items-center py-4 px-8 w-full">
-    <div className='flex justify-between w-full py-6'>
+    <div className='flex flex-col md:flex-row justify-between gap-6 md:gap-0 w-full py-6 [&>div>ul]:flex [&>div>ul]:md:block [&>div>ul]:gap-3'>
       <div className='w-[25%] flex flex-col gap-14'>
         <h1 className='text-3xl font-extrabold'>Foruniro.</h1>
-        <address className='leading-relaxed text-[#9F9F9F]'>400 University Drive Suite 200 Coral Gables,
+        <address className='leading-relaxed hidden md:block text-[#9F9F9F]'>400 University Drive Suite 200 Coral Gables,
         FL 33134 USA</address>
       </div>
 
-      <div className='flex flex-col gap-14'>
+      <div className='flex md:flex-col gap-14 justify-between'>
         <h1 className='text-[#9F9F9F]'>Links</h1>
-        <ul>
+        <ul className='flex md:block'>
           <li>
             <Link href={'/'}>
               Home
@@ -37,7 +37,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className='flex flex-col gap-14'>
+      <div className='flex md:flex-col gap-14 justify-between'>
       <h1 className='text-[#9F9F9F]'>Help</h1>
         <ul>
           <li>
@@ -58,7 +58,7 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div className='flex flex-col gap-14'>
+      <div className='flex md:flex-col gap-14 justify-between'>
         <h1 className='text-[#9F9F9F]'>Newsletter</h1>
         <div className=''>
           <input className='text-xs mr-4 border-b-2 border-gray-200 outline-none' type="email" name="" id="" placeholder='Enter Your Email Address' />

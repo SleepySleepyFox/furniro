@@ -1,9 +1,5 @@
+import { FiltersState } from "@/lib/types/FilterTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface FiltersState {
-    itemsPerPage: number;
-    sortBy: string;
-}
 
 const initialState: FiltersState = {
     itemsPerPage: 10,

@@ -52,7 +52,7 @@ const posAdjust = (e: React.MouseEvent) => {
     className='h-[64px] w-[318px] border-[1px] border-black rounded-xl relative text-black  overflow-clip'>  
         Place order
        
-        <div ref={divRef} className='w-3 h-3 scale-0 rounded-full bg-black absolute divRef aspect-square -z-10'></div>
+        <div ref={divRef} className='w-16 h-16 scale-0 rounded-full bg-black absolute divRef aspect-square -z-10'></div>
     </button>
   )
 }

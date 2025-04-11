@@ -29,8 +29,8 @@ interface productFields {
     depth: number;
   };
   tags: string[] | null;
-  created_at: string; // ISO 8601 date string
-  updated_at: string; // ISO 8601 date string
+  created_at: string;
+  updated_at: string; 
 }
 
 export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean, sliceTo : number}) {
@@ -39,12 +39,12 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
   const [itemsDisplayedAmount, setItmesDisplayedAmount] = useState(itemsDisplayedFilter)
   
   const productDataLength = Object.keys(data).length
-  // slisceTo state 
+
   const getData = async (limit : number) => {
     await axios.get(`https://furniture-api.fly.dev/v1/products?limit=${limit}`)
       .then(data => {
         setDisplayedProducts(data.data.data)
-        console.log('api data:',data.data.data)
+        localStorage.setItem("productSection", JSON.stringify(data.data.data))
       })
     }
     
