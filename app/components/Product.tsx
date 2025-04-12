@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Button from '../common/Button'
@@ -9,16 +10,15 @@ import { usePathname } from 'next/navigation'
 export default function ({ productData }: { productData : productFields }) {
   const path = usePathname()
   return (
-    // <div>
-    // <Link className='-z-10' href={{pathname: `/Products/${productData.id}`, query: {productData : JSON.stringify(productData)}}}>
-    //   <ArrowRight color='white'/>
-    // </Link>
-    // </div>
-    
     <div className='relative flex flex-col h-[446px]  border-solid bg-[#F4F5F7] border-[#F4F5F7] border-2 justify-self-stretch'>
+      {/* query: {productData : JSON.stringify(productData), path: path} */}
        <Link 
-       href={{pathname: `/Products/${productData.id}`, query: {productData : JSON.stringify(productData), path: path}}} 
+       href={{pathname: `/Products/${productData.id}`}}
        className='flex flex-col justify-center items-center bg-[#0000004b] opacity-0 hover:opacity-100 duration-300 h-full w-full z-10 absolute'
+       onClick={() => {
+        localStorage.setItem("productData", JSON.stringify(productData))
+        console.log(localStorage.getItem("productData"))
+      }}
        >
         <div 
           onClick={(e) => {
