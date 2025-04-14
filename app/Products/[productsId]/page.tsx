@@ -1,5 +1,6 @@
 'use client'
 import Breadcrumbs from '@/app/common/Breadcrumbs';
+import Counter from '@/app/components/Counter';
 import ProductPhotos from '@/app/components/ProductPhotos';
 import { productFields } from '@/app/types/productTypes';
 import { Star } from 'lucide-react';
@@ -47,6 +48,7 @@ export default function page({params, searchParams} : {params : {productsId : st
                     onMouseLeave={() => setDisplayedRate(0)}/>
             </div>
             <p>{data.description}</p>
+            <Counter/>
         </div>
     </div>
   )
