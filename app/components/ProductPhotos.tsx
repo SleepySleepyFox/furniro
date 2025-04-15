@@ -10,7 +10,7 @@ export default function ProductPhotos() {
   return (
     <div>
       <div>
-        <img src={data.image_path} alt="" />
+        <img src={data.image_path} alt="" className='rounded-md'/>
       </div>
     </div>
   )

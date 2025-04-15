@@ -44,7 +44,7 @@ export default function page() {
         <p className='font-light'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in <a href=""><strong className='font-bold'>our privacy policy.</strong></a></p>
 
         <div className='w-full flex justify-center pt-6'>
-         <ButtonAnimated/>
+         <ButtonAnimated text={'Place order'}/>
         </div>
       </div>
     </div>
