@@ -5,9 +5,12 @@ import Image from 'next/image';
 import Sidebar from './sidebar';
 import { User, Heart, Search, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
+import { createPortal } from 'react-dom';
+import CartModal from './cart/CartModal';
 
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false)
+  const [showCart, setShowCart] = useState(false)
   useEffect(() => {
     console.log(sidebar)
   }, [sidebar])
@@ -49,7 +52,12 @@ export default function Navbar() {
         <User className='w-4 lg:w-5' />
         <Search className='w-4 lg:w-5' />
         <Heart className='w-4 lg:w-5' />
-        <ShoppingCart className='w-4 lg:w-5' />
+        <div className='relative'>
+          <ShoppingCart className='w-4 lg:w-5' onClick={() => {
+            setShowCart(e => !e)
+            }}/>
+          {showCart && createPortal(<CartModal setShowCart={setShowCart}/>,document.body)}
+        </div>
       </div>
     </div >
 

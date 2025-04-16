@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef } from 'react'
 
-export default function ButtonAnimated({text, alertText} :  {text : string, alertText? : string}) {
+export default function ButtonAnimated({text, alertText, addStyle} :  {text : string, alertText? : string, addStyle ? : string}) {
 const divRef = useRef(null)
 const buttonRef = useRef<HTMLButtonElement>(null)
 
@@ -50,7 +50,7 @@ const posAdjust = (e: React.MouseEvent) => {
     onMouseLeave={(e) => animationOut(e)}
     onMouseMove={(e) => posAdjust(e)}
     onClick={() => {alertText && alert(alertText)}}
-    className='h-[64px] w-[318px] border-[1px] border-black rounded-xl relative text-black  overflow-clip'>  
+    className={`${addStyle != undefined ? addStyle : "h-[64px] w-[318px]"} border-[1px] border-black rounded-xl relative text-black  overflow-clip`}>  
         {text}
        
         <div ref={divRef} className='w-16 h-16 scale-0 rounded-full bg-black absolute divRef aspect-square -z-10'></div>

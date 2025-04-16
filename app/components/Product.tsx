@@ -6,12 +6,12 @@ import { ArrowLeftRight, ArrowRight, Heart, Share2 } from 'lucide-react'
 import { productFields } from '../types/productTypes'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { json } from 'stream/consumers'
 
 export default function ({ productData }: { productData : productFields }) {
   const path = usePathname()
   return (
     <div className='relative flex flex-col h-[446px]  border-solid bg-[#F4F5F7] border-[#F4F5F7] border-2 justify-self-stretch'>
-      {/* query: {productData : JSON.stringify(productData), path: path} */}
        <Link 
        href={{pathname: `/Products/${productData.id}`}}
        className='flex flex-col justify-center items-center bg-[#0000004b] opacity-0 hover:opacity-100 duration-300 h-full w-full z-10 absolute'
@@ -25,7 +25,12 @@ export default function ({ productData }: { productData : productFields }) {
             e.preventDefault()
             e.stopPropagation()
         }}>
-          <Button color='z-50 bg-white hover:bg-primary' text='add to cart' textColor='text-primary hover:text-white' addStyle='px-8 py-3' size='h-fit w-fit'/>
+          <Button 
+            color='z-50 bg-white hover:bg-primary' 
+            text='add to cart' 
+            textColor='text-primary hover:text-white' 
+            addStyle='px-8 py-3 z-50' size='h-fit w-fit'
+          />
         </div>
         <div className='flex gap-2 text-white'>
           <div
