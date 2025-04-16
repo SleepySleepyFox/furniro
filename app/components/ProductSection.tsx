@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
 import { productFields } from '../types/productTypes';
+import { motion } from 'motion/react';
 
 export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean, sliceTo : number}) {
   const [displayedProducts, setDisplayedProducts] = useState<productFields[]>([])
@@ -29,7 +30,9 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
     }, [itemsDisplayedAmount, itemsDisplayedFilter])
     
     const apiData = displayedProducts?.map((e, index) => {
-      return <Product key={index} productData={e}/>
+      return <motion.div className='w-full' key={index} initial={{opacity: 0, x: -20}} whileInView={{opacity: 100, x: 0, transition: {duration: 0.3 , delay: index * 0.1}}} viewport={{once: true}}>
+        <Product key={index} productData={e}/>
+      </motion.div>
     })
     
     console.log('data: ', displayedProducts)
