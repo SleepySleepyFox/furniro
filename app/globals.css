@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .checkout-forms {
-    @apply border-[1px] border-[#9F9F9F] rounded-md h-[40px]
+    @apply border-[1px] border-[#9F9F9F] rounded-md h-[40px] px-4
 }
 

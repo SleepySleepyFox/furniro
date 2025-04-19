@@ -20,7 +20,8 @@ export default {
         primary: "#B88E2F",
         primary_h: "#3A3A3A",
         secondary: "#FCF8F3",
-        tertiary: "#F9F1E7"
+        tertiary: "#F9F1E7",
+        muted: "#9F9F9F"
       },
 
       screens: {

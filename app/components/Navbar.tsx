@@ -8,9 +8,11 @@ import Link from 'next/link';
 import { createPortal } from 'react-dom';
 import CartModal from './cart/CartModal';
 
+
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false)
   const [showCart, setShowCart] = useState(false)
+
   useEffect(() => {
     console.log(sidebar)
   }, [sidebar])
@@ -49,7 +51,9 @@ export default function Navbar() {
       </nav>
 
       <div className='hidden md:flex md:gap-10 lg:gap-16'>
-        <User className='w-4 lg:w-5' />
+        <Link href={'/Auth'}>
+          <User className='w-4 lg:w-5' />
+        </Link>
         <Search className='w-4 lg:w-5' />
         <Heart className='w-4 lg:w-5' />
         <div className='relative'>
