@@ -9,6 +9,8 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/lib/store';
 import { productFields } from '../types/productTypes';
 import { motion } from 'motion/react';
+import ProductSkeleton from '../common/ProductSkeleton';
+import { useRouter } from 'next/navigation';
 
 export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean, sliceTo : number}) {
   const [displayedProducts, setDisplayedProducts] = useState<productFields[]>([])
@@ -17,23 +19,40 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
   
   const productDataLength = Object.keys(data).length
 
+  const router = useRouter();
+  const ShopLink = () => {
+    router.push('/Shop');
+  };
+
   const getData = async (limit : number) => {
-    await axios.get(`https://furniture-api.fly.dev/v1/products?limit=${limit}`)
+      await axios.get(`https://furniture-api.fly.dev/v1/products?limit=${limit}`)
       .then(data => {
         setDisplayedProducts(data.data.data)
         localStorage.setItem("productSection", JSON.stringify(data.data.data))
       })
-    }
+  }
     
     useEffect(() => {
       getData(itemsDisplayedAmount)
-    }, [itemsDisplayedAmount, itemsDisplayedFilter])
+    }, [itemsDisplayedAmount])
     
     const apiData = displayedProducts?.map((e, index) => {
-      return <motion.div className='w-full' key={index} initial={{opacity: 0, x: -20}} whileInView={{opacity: 100, x: 0, transition: {duration: 0.3 , delay: index * 0.1}}} viewport={{once: true}}>
+      const isNew = index >= displayedProducts.length - itemsDisplayedFilter;
+      return(
+      <motion.div 
+        className='w-full'
+        key={index}
+        layout
+        initial={isNew ? { opacity: 0, x: -20 } : false}
+        animate={isNew ? { opacity: 1, x: 0 } : false}
+        transition={isNew ? { duration: 0.3, delay: (index % itemsDisplayedFilter) * 0.1 } : {}}
+        viewport={isNew ? { once: true } : undefined}
+      >
         <Product key={index} productData={e}/>
       </motion.div>
-    })
+      )
+    } 
+)
     
     console.log('data: ', displayedProducts)
   return (
@@ -47,8 +66,8 @@ export default function ProductSection({isOnHero, sliceTo} : {isOnHero : boolean
         </div>
         {isOnHero ?
          <Link href={'/Shop'} className='w-full flex justify-center'>
-            <Button color='bg-transparent' textColor='text-primary_h' addStyle='border-primary border-solid border-2  hover:text-white hover:bg-primary' text='Show more'/>
-          </Link> : 
+            <Button color='bg-transparent' textColor='text-primary_h' addStyle='border-primary border-solid border-2 hover:text-white hover:bg-primary' text='Show more' onClick={ShopLink}/>
+          </Link> :
           // Find good conditin to stop showing button befor it exedes limits of 100 items 
          <div 
           className='px-6 py-2 border-2 border-primary w-fit self-center mt-2 hover:bg-primary hover:text-white duration-300 select-none'

@@ -1,12 +1,13 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ButtonAnimated from '../common/ButtonAnimated'
 import Button from '../common/Button';
 import { UserData } from '../types/UserData';
 import axios from 'axios';
 import { p } from 'framer-motion/client';
+import Link from 'next/link';
 
-export default function page() {
+export default function Register() {
     const [FirstName, setFirstName] = useState('')
     const [SecondName, setSecondName] = useState('')
     const [Email, setEmail] = useState('')
@@ -15,6 +16,7 @@ export default function page() {
     const [error, setError] = useState<Error | null>(null)
 
     const sendData = () => {
+        setError(null)
         if(!process.env.NEXT_PUBLIC_FURNIRO_BACKEND) return 
 
                 axios.post(`${process.env.NEXT_PUBLIC_FURNIRO_BACKEND}api/register`,{
@@ -24,7 +26,6 @@ export default function page() {
                     Password: Password
                 }).catch(err => {
                     if(err){
-                        console.log(err)
                         if(err.status == 400){
                             setError(err)
                         }
@@ -47,6 +48,7 @@ export default function page() {
                 <input type="password" placeholder='Repeat Passwprd' className='checkout-forms w-full' onChange={(e) => setRepeatPassword(e.target.value)}/>
                 <Button color='bg-primary' text='Register' textColor='text-white' size='w-full p-4' addStyle='rounded-md' onClick={sendData}/>
             </form>
+        <p className='text-center'>Already have an account? <Link href={'/Login'} className='text-primary hover:underline'>Log in here</Link></p>
         </div>
     </div>
   )

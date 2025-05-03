@@ -51,7 +51,7 @@ export default function Navbar() {
       </nav>
 
       <div className='hidden md:flex md:gap-10 lg:gap-16'>
-        <Link href={'/Auth'}>
+        <Link href={'/Profile'}>
           <User className='w-4 lg:w-5' />
         </Link>
         <Search className='w-4 lg:w-5' />
