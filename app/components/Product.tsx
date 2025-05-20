@@ -7,9 +7,16 @@ import { productFields } from '../types/productTypes'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { json } from 'stream/consumers'
+import axios from 'axios'
 
 export default function ({ productData }: { productData : productFields }) {
   const path = usePathname()
+  const addToCart = async () => {
+    console.log('item added')
+    axios.post(`${process.env.NEXT_PUBLIC_FURNIRO_BACKEND}api/addCartItem`, {
+      
+    })
+  }
   return (
     <div className='relative flex flex-col h-[446px]  border-solid bg-[#F4F5F7] border-[#F4F5F7] border-2 justify-self-stretch'>
        <Link 
@@ -30,6 +37,7 @@ export default function ({ productData }: { productData : productFields }) {
             text='add to cart' 
             textColor='text-primary hover:text-white' 
             addStyle='px-8 py-3 z-50' size='h-fit w-fit'
+            onClick ={() => addToCart()}
           />
         </div>
         <div className='flex gap-2 text-white'>
