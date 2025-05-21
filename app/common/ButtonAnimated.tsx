@@ -1,7 +1,6 @@
 "use client"
-import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import React, { useEffect, useRef } from "react"
+import React, { useRef } from "react"
 
 export default function ButtonAnimated({ text, alertText, addStyle, onClick }: { text: string, alertText?: string, addStyle?: string, onClick?: () => void }) {
     const divRef = useRef(null)
@@ -49,7 +48,10 @@ export default function ButtonAnimated({ text, alertText, addStyle, onClick }: {
             onMouseEnter={(e) => animationIn(e)}
             onMouseLeave={(e) => animationOut(e)}
             onMouseMove={(e) => posAdjust(e)}
-            onClick={() => { onClick && onClick() }}
+            onClick={(e) => {
+                e.preventDefault()
+                onClick && onClick()
+            }}
             className={`${addStyle != undefined ? addStyle : "h-[64px] w-[318px]"} border-[1px] border-black rounded-xl relative text-black  overflow-clip`}>
             {text}
 
